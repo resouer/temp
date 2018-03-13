@@ -1,29 +1,42 @@
-cluster_name: harrydevbox
- 
-azure_cluster:
-  harrydevbox:
-    infra_node_num: 1 
-    infra_vm_size : Standard_D3_v2
-    worker_node_num: 2
-    worker_vm_size: Standard_D3_v2
-    azure_location: westus
- 
+DeployAuthentications:
+- Corp
+- Gmail
+- Live
 UserGroups:
   DLWSAdmins:
-    Allowed: [ "jinl@microsoft.com", "jinlmsft@hotmail.com", "t-lezhan@microsoft.com" ]
-    uid : "20000"
-    gid : "20001"
+    Allowed:
+    - jinl@microsoft.com
+    - jinlmsft@hotmail.com
+    - t-lezhan@microsoft.com
+    gid: "20001"
+    uid: "20000"
   DLWSRegister:
-    Allowed: [ "@gmail.com" ]
-    uid : "20001-29999"
-    gid : "20001"
- 
-WebUIregisterGroups: [ "DLWSRegister"]
-WebUIauthorizedGroups: [ "DLWSAdmins" ]
-WebUIadminGroups: ["DLWSAdmins"]
- 
-DeployAuthentications : ["Corp", "Gmail", "Live"]
- 
-WinbindServers: []   
- 
+    Allowed:
+    - '@gmail.com'
+    gid: "20001"
+    uid: 20001-29999
+WebUIadminGroups:
+- DLWSAdmins
+WebUIauthorizedGroups:
+- DLWSAdmins
+WebUIregisterGroups:
+- DLWSRegister
+WinbindServers: []
+azure_cluster:
+  harrydevbox:
+    azure_location: eastus
+    infra_node_num: 1
+    infra_vm_size: Standard_D3_v2
+    worker_node_num: 2
+    worker_vm_size: Standard_D3_v2
+cloud_config:
+  dev_network:
+    source_addresses_prefixes:
+    - 73.109.29.0/24
+    - 167.220.0.0/16
+    - 131.107.0.0/16
+    - 52.151.0.0/16
+    - 52.168.0.0/16
+cluster_name: harrydevbox
+datasource: ""
 webuiport: 3080
