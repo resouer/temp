@@ -1,0 +1,115 @@
+-- Logs begin at Sat 2018-08-18 08:30:01 UTC, end at Sat 2018-08-18 09:24:37 UTC. --
+Aug 18 08:30:02 kata-shimv2 systemd[1]: Starting Initial cloud-init job (pre-networking)...
+Aug 18 08:30:05 kata-shimv2 cloud-init[784]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'init-local' at Sat, 18 Aug 2018 08:30:05 +0000. Up 10.76 seconds.
+Aug 18 08:30:05 kata-shimv2 systemd[1]: Started Initial cloud-init job (pre-networking).
+Aug 18 08:30:05 kata-shim-v2 systemd[1]: Starting Initial cloud-init job (metadata service crawler)...
+Aug 18 08:30:07 kata-shim-v2 cloud-init[1266]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'init' at Sat, 18 Aug 2018 08:30:06 +0000. Up 11.75 seconds.
+Aug 18 08:30:07 kata-shim-v2 cloud-init[1266]: ci-info: ++++++++++++++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++++++++++++
+Aug 18 08:30:07 kata-shim-v2 cloud-init[1266]: ci-info: +--------+------+--------------------------+-----------------+--------+-------------------+
+Aug 18 08:30:07 kata-shim-v2 cloud-init[1266]: ci-info: | Device |  Up  |         Address          |       Mask      | Scope  |     Hw-Address    |
+Aug 18 08:30:07 kata-shim-v2 cloud-init[1266]: ci-info: +--------+------+--------------------------+-----------------+--------+-------------------+
+Aug 18 08:30:07 kata-shim-v2 cloud-init[1266]: ci-info: |  ens4  | True |        10.140.0.5        | 255.255.255.255 | global | 42:01:0a:8c:00:05 |
+Aug 18 08:30:07 kata-shim-v2 cloud-init[1266]: ci-info: |  ens4  | True | fe80::4001:aff:fe8c:5/64 |        .        |  link  | 42:01:0a:8c:00:05 |
+Aug 18 08:30:07 kata-shim-v2 cloud-init[1266]: ci-info: |   lo   | True |        127.0.0.1         |    255.0.0.0    |  host  |         .         |
+Aug 18 08:30:07 kata-shim-v2 cloud-init[1266]: ci-info: |   lo   | True |         ::1/128          |        .        |  host  |         .         |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: +--------+------+--------------------------+-----------------+--------+-------------------+
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: +++++++++++++++++++++++++++++Route IPv4 info++++++++++++++++++++++++++++++
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: +-------+-------------+------------+-----------------+-----------+-------+
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: | Route | Destination |  Gateway   |     Genmask     | Interface | Flags |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: +-------+-------------+------------+-----------------+-----------+-------+
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: |   0   |   0.0.0.0   | 10.140.0.1 |     0.0.0.0     |    ens4   |   UG  |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: |   1   |  10.140.0.1 |  0.0.0.0   | 255.255.255.255 |    ens4   |   UH  |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: +-------+-------------+------------+-----------------+-----------+-------+
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: +++++++++++++++++++Route IPv6 info+++++++++++++++++++
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: +-------+-------------+---------+-----------+-------+
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: | Route | Destination | Gateway | Interface | Flags |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: +-------+-------------+---------+-----------+-------+
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: |   0   |  fe80::/64  |    ::   |    ens4   |   U   |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: |   2   |   ff00::/8  |    ::   |    ens4   |   U   |
+Aug 18 08:30:07 kata-shim-v2 systemd[1]: Started Initial cloud-init job (metadata service crawler).
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: ci-info: +-------+-------------+---------+-----------+-------+
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: Generating public/private rsa key pair.
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: Your identification has been saved in /etc/ssh/ssh_host_rsa_key.
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: Your public key has been saved in /etc/ssh/ssh_host_rsa_key.pub.
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: The key fingerprint is:
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: SHA256:c/m5qDmvUBnwZnCiNviOrYn2YLLF1SrWc+Or13B70H0 root@kata-shim-v2
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: The key's randomart image is:
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: +---[RSA 2048]----+
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: |      + .        |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: |   . . *         |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: |  . +   =        |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: |   o o o o .     |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: |    o . S.o.     |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: | . * ...oo....E  |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: |.o* * ++ o  o.   |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: |o*.+ +.o+... .   |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: |+ +..oo.+*o .    |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: +----[SHA256]-----+
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: Generating public/private dsa key pair.
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: Your identification has been saved in /etc/ssh/ssh_host_dsa_key.
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: Your public key has been saved in /etc/ssh/ssh_host_dsa_key.pub.
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: The key fingerprint is:
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: SHA256:cr7Hoz8q9fCipTu7ml02XJyhaOEJNByPgsf/cE355wE root@kata-shim-v2
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: The key's randomart image is:
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: +---[DSA 1024]----+
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: |   .+.           |
+Aug 18 08:30:08 kata-shim-v2 cloud-init[1266]: | o ..+   .       |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |. + o o o E      |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: | . o o * + +     |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |    o B S = o    |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |     = =o. o .   |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |      ..B=  .    |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |     oo=.oB      |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |    o.BB+*.o     |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: +----[SHA256]-----+
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: Generating public/private ecdsa key pair.
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: Your identification has been saved in /etc/ssh/ssh_host_ecdsa_key.
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: Your public key has been saved in /etc/ssh/ssh_host_ecdsa_key.pub.
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: The key fingerprint is:
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: SHA256:r1/mz7ra6fZaBQu/h7ONLMS54G3+XYPRxo10bPzUVTw root@kata-shim-v2
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: The key's randomart image is:
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: +---[ECDSA 256]---+
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |               .+|
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |               E+|
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |            . o O|
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |             +oBo|
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |        S  . o+++|
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |         .. + ++ |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |         ..+oo=.o|
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |         ..=*= Bo|
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |        ..o*XOO o|
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: +----[SHA256]-----+
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: Generating public/private ed25519 key pair.
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: Your identification has been saved in /etc/ssh/ssh_host_ed25519_key.
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: Your public key has been saved in /etc/ssh/ssh_host_ed25519_key.pub.
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: The key fingerprint is:
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: SHA256:eMD8LBfaf9xEa0fgSL09zkqlWDn0qiKFZiXYQn42pnk root@kata-shim-v2
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: The key's randomart image is:
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: +--[ED25519 256]--+
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |            ...  |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |     +     . +.. |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |    o * .   o =o.|
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |     + # o   =.*.|
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |      @ S   o @ o|
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |     o E o o B + |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |      + . . = o  |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |       . . o .   |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: |        . .      |
+Aug 18 08:30:09 kata-shim-v2 cloud-init[1266]: +----[SHA256]-----+
+Aug 18 08:30:08 kata-shim-v2 systemd[1]: Reached target Cloud-config availability.
+Aug 18 08:30:18 kata-shim-v2 systemd[1]: Starting Apply the settings specified in cloud-config...
+Aug 18 08:30:20 kata-shim-v2 cloud-init[2164]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'modules:config' at Sat, 18 Aug 2018 08:30:18 +0000. Up 24.12 seconds.
+Aug 18 08:30:20 kata-shim-v2 systemd[1]: Started Apply the settings specified in cloud-config.
+Aug 18 08:30:20 kata-shim-v2 systemd[1]: Starting Execute cloud user/final scripts...
+Aug 18 08:30:20 kata-shim-v2 ec2[2326]: 
+Aug 18 08:30:20 kata-shim-v2 ec2[2326]: #############################################################
+Aug 18 08:30:20 kata-shim-v2 ec2[2326]: -----BEGIN SSH HOST KEY FINGERPRINTS-----
+Aug 18 08:30:20 kata-shim-v2 ec2[2326]: 1024 SHA256:cr7Hoz8q9fCipTu7ml02XJyhaOEJNByPgsf/cE355wE root@kata-shim-v2 (DSA)
+Aug 18 08:30:20 kata-shim-v2 ec2[2326]: 256 SHA256:r1/mz7ra6fZaBQu/h7ONLMS54G3+XYPRxo10bPzUVTw root@kata-shim-v2 (ECDSA)
+Aug 18 08:30:20 kata-shim-v2 ec2[2326]: 256 SHA256:eMD8LBfaf9xEa0fgSL09zkqlWDn0qiKFZiXYQn42pnk root@kata-shim-v2 (ED25519)
+Aug 18 08:30:20 kata-shim-v2 ec2[2326]: 2048 SHA256:c/m5qDmvUBnwZnCiNviOrYn2YLLF1SrWc+Or13B70H0 root@kata-shim-v2 (RSA)
+Aug 18 08:30:20 kata-shim-v2 cloud-init[2300]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 running 'modules:final' at Sat, 18 Aug 2018 08:30:20 +0000. Up 26.56 seconds.
+Aug 18 08:30:20 kata-shim-v2 cloud-init[2300]: ci-info: no authorized ssh keys fingerprints found for user ubuntu.
+Aug 18 08:30:20 kata-shim-v2 cloud-init[2300]: Cloud-init v. 18.3-9-g2e62cb8a-0ubuntu1~16.04.2 finished at Sat, 18 Aug 2018 08:30:20 +0000. Datasource DataSourceGCE.  Up 26.76 seconds
+Aug 18 08:30:20 kata-shim-v2 systemd[1]: Started Execute cloud user/final scripts.
+Aug 18 08:30:20 kata-shim-v2 systemd[1]: Reached target Cloud-init target.

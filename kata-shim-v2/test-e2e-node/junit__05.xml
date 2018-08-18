@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <testsuite tests="20" failures="0" time="1104.821344638">
+      <testcase name="[sig-storage] Projected should be consumable from pods in volume as non-root with defaultMode and fsGroup set [NodeFeature:FSGroup]" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] [Feature:DynamicKubeletConfig][NodeFeature:DynamicKubeletConfig][Serial][Disruptive]  update Node.Spec.ConfigSource: state transitions: status and events should match expectations" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] MirrorPod when create a mirror pod  should be updated when static pod updated [NodeConformance] [Conformance]" classname="E2eNode Suite" time="108.442150941"></testcase>
+      <testcase name="[k8s.io] Summary API [NodeConformance] when querying /stats/summary should report resource usage through the stats api" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] Container Manager Misc [Serial] Validate OOM score adjustments [NodeFeature:OOMScoreAdj] once the node is setup burstable container&#39;s oom-score-adj should be between [2, 1000)" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] Pods should have their auto-restart back-off timer reset on image update [Slow][NodeConformance]" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] Projected should provide podname as non-root with fsgroup and defaultMode [NodeFeature:FSGroup]" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] Downward API [Serial] [Disruptive] [NodeFeature:EphemeralStorage] Downward API tests for local ephemeral storage should provide container&#39;s limits.ephemeral-storage and requests.ephemeral-storage as env vars" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] ImageID [NodeFeature: ImageID] should be set to the manifest digest (from RepoDigests) when available" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] EmptyDir volumes should support (root,0777,tmpfs) [NodeConformance] [Conformance]" classname="E2eNode Suite" time="54.17488979"></testcase>
+      <testcase name="[k8s.io] NodeProblemDetector [NodeFeature:NodeProblemDetector] [k8s.io] SystemLogMonitor should generate node condition and events for corresponding errors" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-api-machinery] Secrets should be consumable from pods in env vars [NodeConformance] [Conformance]" classname="E2eNode Suite" time="26.135160575"></testcase>
+      <testcase name="[sig-storage] Projected should be consumable from pods in volume with mappings as non-root [NodeConformance] [Conformance]" classname="E2eNode Suite" time="60.186277604"></testcase>
+      <testcase name="[sig-storage] EmptyDir volumes when FSGroup is specified [NodeFeature:FSGroup] new files should be created with FSGroup ownership when container is non-root" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] ConfigMap should be consumable in multiple volumes in the same pod [NodeConformance] [Conformance]" classname="E2eNode Suite" time="52.173676906"></testcase>
+      <testcase name="[k8s.io] GarbageCollect [Serial][NodeFeature:GarbageCollect] Garbage Collection Test: Many Restarting Containers Should eventually garbage collect containers when we exceed the number of dead containers per container" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] Downward API volume should provide node allocatable (cpu) as default cpu limit if the limit is not set [NodeConformance] [Conformance]" classname="E2eNode Suite" time="50.168465924"></testcase>
+      <testcase name="[k8s.io] InitContainer [NodeConformance] should not start app containers and fail the pod if init containers fail on a RestartNever pod" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] Kubelet Cgroup Manager QOS containers On enabling QOS cgroup hierarchy Top level QoS containers should have been created [NodeConformance]" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] GarbageCollect [Serial][NodeFeature:GarbageCollect] Garbage Collection Test: One Non-restarting Container Should eventually garbage collect containers when we exceed the number of dead containers per container" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] Projected should provide container&#39;s cpu request [NodeConformance] [Conformance]" classname="E2eNode Suite" time="20.119933973"></testcase>
+      <testcase name="[k8s.io] Probing container with readiness probe should not be ready before initial delay and never restart [NodeConformance] [Conformance]" classname="E2eNode Suite" time="52.088010813"></testcase>
+      <testcase name="[sig-storage] ConfigMap updates should be reflected in volume [NodeConformance] [Conformance]" classname="E2eNode Suite" time="196.395052922"></testcase>
+      <testcase name="[k8s.io] Density [Serial] [Slow] create a batch of pods with higher API QPS  latency/resource should be within limit when create 105 pods with 100ms interval (QPS 60) [Benchmark][NodeSpecialFeature:Benchmark]" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-node] Dockershim [Serial] [Disruptive] [Feature:Docker][Legacy:Docker] When pod sandbox checkpoint is missing should complete pod sandbox clean up" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] ConfigMap should be consumable from pods in volume as non-root [NodeConformance] [Conformance]" classname="E2eNode Suite" time="18.129768865"></testcase>
+      <testcase name="[sig-storage] EmptyDir volumes should support (root,0777,default) [NodeConformance] [Conformance]" classname="E2eNode Suite" time="18.112802435"></testcase>
+      <testcase name="[k8s.io] Variable Expansion should allow substituting values in a container&#39;s command [NodeConformance] [Conformance]" classname="E2eNode Suite" time="18.116300643"></testcase>
+      <testcase name="[k8s.io] ContainerLogRotation [Slow] [Serial] [Disruptive] when a container generates a lot of log should be rotated and limited to a fixed amount of files" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] HostPath should support r/w [NodeConformance]" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] EmptyDir volumes when FSGroup is specified [NodeFeature:FSGroup] files with FSGroup ownership should support (root,0644,tmpfs)" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] Docker Containers should use the image defaults if command and args are blank [NodeConformance] [Conformance]" classname="E2eNode Suite" time="16.111073972"></testcase>
+      <testcase name="[sig-storage] EmptyDir volumes when FSGroup is specified [NodeFeature:FSGroup] volume on default medium should have the correct mode using FSGroup" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] Variable Expansion should fail substituting values in a volume subpath with absolute path [Feature:VolumeSubpathEnvExpansion][NodeAlphaFeature:VolumeSubpathEnvExpansion][Slow]" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] EmptyDir volumes should support (root,0644,default) [NodeConformance] [Conformance]" classname="E2eNode Suite" time="16.103720043"></testcase>
+      <testcase name="[k8s.io] Security Context when pod PID namespace is configurable [Feature:ShareProcessNamespace][NodeAlphaFeature:ShareProcessNamespace] containers in pods using isolated PID namespaces should all receive PID 1" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] Projected should provide podname as non-root with fsgroup [NodeFeature:FSGroup]" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] GKE system requirements [Conformance][NodeConformance][Feature:GKEEnv][NodeFeature:GKEEnv] The docker container network should work" classname="E2eNode Suite" time="0.000811202">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] Security Context When creating a container with runAsUser should run the container with uid 65534 [NodeConformance]" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] Projected should update annotations on modification [NodeConformance] [Conformance]" classname="E2eNode Suite" time="44.634451534"></testcase>
+      <testcase name="[sig-storage] Projected should be consumable from pods in volume with mappings and Item mode set [NodeConformance] [Conformance]" classname="E2eNode Suite" time="104.250440071"></testcase>
+      <testcase name="[k8s.io] Probing container should have monotonically increasing restart count [Slow][NodeConformance] [Conformance]" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[k8s.io] Security Context when creating a pod in the host network namespace shouldn&#39;t show the same port in the non-hostnetwork containers [NodeFeature:HostAccess]" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] Downward API volume should provide podname only [NodeConformance] [Conformance]" classname="E2eNode Suite" time="52.170595732"></testcase>
+      <testcase name="[sig-storage] Projected should be consumable from pods in volume with mappings [NodeConformance] [Conformance]" classname="E2eNode Suite" time="50.159951806"></testcase>
+      <testcase name="[sig-storage] HostPath should support existing single file subPath" classname="E2eNode Suite" time="0">
+          <skipped></skipped>
+      </testcase>
+      <testcase name="[sig-storage] Downward API volume should update annotations on modification [NodeConformance] [Conformance]" classname="E2eNode Suite" time="50.621152701"></testcase>
+      <testcase name="[k8s.io] Kubelet when scheduling a read only busybox container it should not write to root filesystem [NodeConformance] [Conformance]" classname="E2eNode Suite" time="82.086405637"></testcase>
+  </testsuite>
