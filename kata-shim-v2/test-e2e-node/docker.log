@@ -1,0 +1,95 @@
+-- Logs begin at Sat 2018-08-18 08:30:01 UTC, end at Sat 2018-08-18 09:24:37 UTC. --
+Aug 18 08:30:08 kata-shim-v2 systemd[1]: Starting Docker Application Container Engine...
+Aug 18 08:30:11 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:11.317184997Z" level=info msg="libcontainerd: started new docker-containerd process" pid=1777
+Aug 18 08:30:11 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:11.317442232Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+Aug 18 08:30:11 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:11.317464522Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+Aug 18 08:30:11 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:11.317941442Z" level=info msg="ccResolverWrapper: sending new addresses to cc: [{unix:///var/run/docker/containerd/docker-containerd.sock 0  <nil>}]" module=grpc
+Aug 18 08:30:11 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:11.318008132Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Aug 18 08:30:11 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:11.318083363Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc4203a37c0, CONNECTING" module=grpc
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="starting containerd" revision=d64c661f1d51c48782c9cec8fda7604785f93587 version=v1.1.1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.content.v1.content"..." type=io.containerd.content.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.snapshotter.v1.btrfs"..." type=io.containerd.snapshotter.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=warning msg="failed to load plugin io.containerd.snapshotter.v1.btrfs" error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.btrfs must be a btrfs filesystem to be used with the btrfs snapshotter"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.snapshotter.v1.aufs"..." type=io.containerd.snapshotter.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.snapshotter.v1.native"..." type=io.containerd.snapshotter.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.snapshotter.v1.overlayfs"..." type=io.containerd.snapshotter.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.snapshotter.v1.zfs"..." type=io.containerd.snapshotter.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=warning msg="failed to load plugin io.containerd.snapshotter.v1.zfs" error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.zfs must be a zfs filesystem to be used with the zfs snapshotter"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.metadata.v1.bolt"..." type=io.containerd.metadata.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=warning msg="could not use snapshotter btrfs in metadata plugin" error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.btrfs must be a btrfs filesystem to be used with the btrfs snapshotter"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=warning msg="could not use snapshotter zfs in metadata plugin" error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.zfs must be a zfs filesystem to be used with the zfs snapshotter"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.differ.v1.walking"..." type=io.containerd.differ.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.gc.v1.scheduler"..." type=io.containerd.gc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.service.v1.containers-service"..." type=io.containerd.service.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.service.v1.content-service"..." type=io.containerd.service.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.service.v1.diff-service"..." type=io.containerd.service.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.service.v1.images-service"..." type=io.containerd.service.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.service.v1.leases-service"..." type=io.containerd.service.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.service.v1.namespaces-service"..." type=io.containerd.service.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.service.v1.snapshots-service"..." type=io.containerd.service.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.monitor.v1.cgroups"..." type=io.containerd.monitor.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.runtime.v1.linux"..." type=io.containerd.runtime.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.service.v1.tasks-service"..." type=io.containerd.service.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.containers"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.content"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.diff"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.events"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.healthcheck"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.images"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.leases"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.namespaces"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.snapshots"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.tasks"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.version"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.cri"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="Start cri plugin with config {PluginConfig:{ContainerdConfig:{Snapshotter:overlayfs DefaultRuntime:{Type:io.containerd.runtime.v1.linux Engine: Root:} UntrustedWorkloadRuntime:{Type: Engine: Root:}} CniConfig:{NetworkPluginBinDir:/opt/cni/bin NetworkPluginConfDir:/etc/cni/net.d NetworkPluginConfTemplate:} Registry:{Mirrors:map[docker.io:{Endpoints:[https://registry-1.docker.io]}]} StreamServerAddress: StreamServerPort:10010 EnableSelinux:false SandboxImage:k8s.gcr.io/pause:3.1 StatsCollectPeriod:10 SystemdCgroup:false EnableTLSStreaming:false} ContainerdRootDir:/var/lib/docker/containerd/daemon ContainerdEndpoint:/var/run/docker/containerd/docker-containerd.sock RootDir:/var/lib/docker/containerd/daemon/io.containerd.grpc.v1.cri StateDir:/var/run/docker/containerd/daemon/io.containerd.grpc.v1.cri}"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="Connect containerd service"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="Get image filesystem path "/var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.overlayfs""
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="loading plugin "io.containerd.grpc.v1.introspection"..." type=io.containerd.grpc.v1
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg=serving... address="/var/run/docker/containerd/docker-containerd-debug.sock"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="Start subscribing containerd event"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="Start recovering state"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg=serving... address="/var/run/docker/containerd/docker-containerd.sock"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="containerd successfully booted in 0.196257s"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="Start event monitor"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="Start snapshots syncer"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12Z" level=info msg="Start streaming server"
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12.485903897Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc4203a37c0, READY" module=grpc
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12.531885233Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12.531945828Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12.532046575Z" level=info msg="ccResolverWrapper: sending new addresses to cc: [{unix:///var/run/docker/containerd/docker-containerd.sock 0  <nil>}]" module=grpc
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12.532065537Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12.532112831Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc420192d40, CONNECTING" module=grpc
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12.533152941Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc420192d40, READY" module=grpc
+Aug 18 08:30:12 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:12.671469175Z" level=info msg="[graphdriver] using prior storage driver: overlay2"
+Aug 18 08:30:13 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:13.081919148Z" level=info msg="Graph migration to content-addressability took 0.00 seconds"
+Aug 18 08:30:13 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:13.082261788Z" level=warning msg="Your kernel does not support swap memory limit"
+Aug 18 08:30:13 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:13.082328311Z" level=warning msg="Your kernel does not support cgroup rt period"
+Aug 18 08:30:13 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:13.082339198Z" level=warning msg="Your kernel does not support cgroup rt runtime"
+Aug 18 08:30:13 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:13.082947048Z" level=info msg="parsed scheme: \"unix\"" module=grpc
+Aug 18 08:30:13 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:13.082972125Z" level=info msg="scheme \"unix\" not registered, fallback to default scheme" module=grpc
+Aug 18 08:30:13 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:13.083014750Z" level=info msg="ccResolverWrapper: sending new addresses to cc: [{unix:///var/run/docker/containerd/docker-containerd.sock 0  <nil>}]" module=grpc
+Aug 18 08:30:13 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:13.083026201Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Aug 18 08:30:13 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:13.083064914Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc4201ad250, CONNECTING" module=grpc
+Aug 18 08:30:13 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:13.083307822Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc4201ad250, READY" module=grpc
+Aug 18 08:30:13 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:13.083326544Z" level=info msg="Loading containers: start."
+Aug 18 08:30:14 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:14.075436857Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Aug 18 08:30:14 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:14.253664226Z" level=info msg="Loading containers: done."
+Aug 18 08:30:14 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:14.620008218Z" level=info msg="Docker daemon" commit=0ffa825 graphdriver(s)=overlay2 version=18.06.0-ce
+Aug 18 08:30:14 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:14.622986885Z" level=info msg="Daemon has completed initialization"
+Aug 18 08:30:14 kata-shim-v2 dockerd[1428]: time="2018-08-18T08:30:14.888962235Z" level=info msg="API listen on /var/run/docker.sock"
+Aug 18 08:30:18 kata-shim-v2 systemd[1]: Started Docker Application Container Engine.
+Aug 18 09:13:23 kata-shim-v2 systemd[1]: Stopping Docker Application Container Engine...
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23.914637568Z" level=info msg="Processing signal 'terminated'"
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23.924147106Z" level=info msg="stopping healthcheck following graceful shutdown" module=libcontainerd
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23.924176975Z" level=info msg="stopping event stream following graceful shutdown" error="context canceled" module=libcontainerd namespace=plugins.moby
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23.924161798Z" level=info msg="stopping event stream following graceful shutdown" error="context canceled" module=libcontainerd namespace=moby
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23Z" level=info msg="Stop CRI service"
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23.924533122Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc420192d40, TRANSIENT_FAILURE" module=grpc
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23.924562644Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc420192d40, CONNECTING" module=grpc
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23Z" level=info msg="Stop CRI service"
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23Z" level=info msg="Event monitor stopped"
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23.924634043Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc4201ad250, TRANSIENT_FAILURE" module=grpc
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23Z" level=info msg="Stream server stopped"
+Aug 18 09:13:23 kata-shim-v2 dockerd[1428]: time="2018-08-18T09:13:23.924660488Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc4201ad250, CONNECTING" module=grpc
+Aug 18 09:13:24 kata-shim-v2 systemd[1]: Stopped Docker Application Container Engine.
