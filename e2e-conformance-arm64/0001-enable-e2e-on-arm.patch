@@ -1,0 +1,64 @@
+From 3a31508da66f174c57240144e87e722055f2313c Mon Sep 17 00:00:00 2001
+From: Bin Lu <bin.lu@arm.com>
+Date: Sat, 25 Aug 2018 19:09:26 +0800
+Subject: [PATCH] enable e2e on arm
+
+Signed-off-by: Bin Lu <bin.lu@arm.com>
+---
+ cluster/clientbin.sh         | 3 +++
+ hack/lib/version.sh          | 8 ++++----
+ test/utils/image/manifest.go | 4 ++--
+ 3 files changed, 9 insertions(+), 6 deletions(-)
+
+diff --git a/cluster/clientbin.sh b/cluster/clientbin.sh
+index 94d6894..a403571 100755
+--- a/cluster/clientbin.sh
++++ b/cluster/clientbin.sh
+@@ -47,6 +47,9 @@ case "$(uname -m)" in
+   arm*)
+     host_arch=arm
+     ;;
++  aarch64*)
++    host_arch=arm64
++    ;;
+   i?86*)
+     host_arch=386
+     ;;
+diff --git a/hack/lib/version.sh b/hack/lib/version.sh
+index 5096ac3..e64011d 100644
+--- a/hack/lib/version.sh
++++ b/hack/lib/version.sh
+@@ -55,11 +55,11 @@ kube::version::get_version_vars() {
+   if [[ -n ${KUBE_GIT_COMMIT-} ]] || KUBE_GIT_COMMIT=$("${git[@]}" rev-parse "HEAD^{commit}" 2>/dev/null); then
+     if [[ -z ${KUBE_GIT_TREE_STATE-} ]]; then
+       # Check if the tree is dirty.  default to dirty
+-      if git_status=$("${git[@]}" status --porcelain 2>/dev/null) && [[ -z ${git_status} ]]; then
++      #if git_status=$("${git[@]}" status --porcelain 2>/dev/null) && [[ -z ${git_status} ]]; then
+         KUBE_GIT_TREE_STATE="clean"
+-      else
+-        KUBE_GIT_TREE_STATE="dirty"
+-      fi
++      #else
++      #  KUBE_GIT_TREE_STATE="dirty"
++      #fi
+     fi
+ 
+     # Use git describe to find the version based on tags.
+diff --git a/test/utils/image/manifest.go b/test/utils/image/manifest.go
+index be9ff8d..2fb4094 100644
+--- a/test/utils/image/manifest.go
++++ b/test/utils/image/manifest.go
+@@ -77,8 +77,8 @@ var (
+ 	Net                      = ImageConfig{e2eRegistry, "net", "1.0", true}
+ 	Netexec                  = ImageConfig{e2eRegistry, "netexec", "1.0", true}
+ 	Nettest                  = ImageConfig{e2eRegistry, "nettest", "1.0", true}
+-	NginxSlim                = ImageConfig{gcRegistry, "nginx-slim", "0.20", true}
+-	NginxSlimNew             = ImageConfig{gcRegistry, "nginx-slim", "0.21", true}
++	NginxSlim                = ImageConfig{gcRegistry, "nginx-slim", "0.26", true}
++	NginxSlimNew             = ImageConfig{gcRegistry, "nginx-slim", "0.27", true}
+ 	Nonewprivs               = ImageConfig{e2eRegistry, "nonewprivs", "1.0", true}
+ 	NoSnatTest               = ImageConfig{e2eRegistry, "no-snat-test", "1.0", true}
+ 	NoSnatTestProxy          = ImageConfig{e2eRegistry, "no-snat-test-proxy", "1.0", true}
+-- 
+2.7.4
+
