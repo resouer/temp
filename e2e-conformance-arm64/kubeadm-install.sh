@@ -4,7 +4,7 @@ KUBE_INSTALL_VERSION="${KUBE_VERSION/v/$null_str}"-00
 
 sudo swapoff -a
 
-go get -d k8s.io/kubernetes
+# go get -d k8s.io/kubernetes
 cp 0001-enable-e2e-on-arm.patch /tmp/
 cd $GOPATH/src/k8s.io/kubernetes
 git clean -df

@@ -17,7 +17,7 @@ usage(){
 #install k8s master node
 install_master(){
 
-    sudo kubeadm init  --pod-network-cidr=10.244.0.0/16  --ignore-preflight-errors=cri --token-ttl 0
+    sudo kubeadm init --kubernetes-version=v1.11.2 --pod-network-cidr=10.244.0.0/16  --ignore-preflight-errors=cri --token-ttl 0
 
     sudo cp /etc/kubernetes/admin.conf $HOME/
     sudo chown $(id -u):$(id -g) $HOME/admin.conf
@@ -151,16 +151,16 @@ kubeadm_e2e_test () {
 case "${1:-}" in
     e2e)
 		echo "kubeadm reset..."
-		kubeadm_reset
+		#kubeadm_reset
 		sleep 1 
 		echo "compile k8s..."
-		./kubeadm-install.sh ${KUBE_VERSION}
+		# ./kubeadm-install.sh ${KUBE_VERSION}
 		sleep 1 
 		echo "install k8s..."
-		install_master
+		# install_master
 		sleep 1
 	        echo "install local pv..."
-		kubeadm_install_local_pv
+		# kubeadm_install_local_pv
 		echo "k8s e2e test..."
 		kubeadm_e2e_test
 		echo "k8s monitor pv..."
