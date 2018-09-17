@@ -141,6 +141,7 @@ kubeadm_e2e_test () {
     export KUBE_MASTER=local
     export KUBERNETES_CONFORMANCE_TEST=y
 #    export GINKGO_PARALLEL=y
+    export E2E_REPORT_DIR=/e2e
 
     cd $GOPATH/src/k8s.io/kubernetes
 #    go run hack/e2e.go -- --provider=local --test --test_args="--ginkgo.skip=Networking-IPv6" > /mnt/k8s-e2e-full-20180827.log & 
